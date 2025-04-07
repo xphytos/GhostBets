@@ -1,0 +1,364 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: 40px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 12px;
+    border: 1px dashed #ccc;
+    margin-right: 10px;
+}
+
+.top-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+}
+
+.user-tools {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.responsible-gaming {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.notifications {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.main-nav a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+.main-nav a.active {
+    color: #4CAF50;
+    border-bottom: 3px solid #4CAF50;
+}
+
+.login-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.login-prompt {
+    font-size: 14px;
+    color: #666;
+}
+
+.login-button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/* Betting Options Layout */
+.betting-options {
+    display: flex;
+    padding: 15px 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    height: calc(100vh - 110px);
+}
+
+.popular-sports {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.sport-list a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.sport-list a:hover {
+    color: #4CAF50;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Sport Tabs */
+.sport-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sport-tab {
+    padding: 8px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.sport-tab.active {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Game Sections */
+.game-section {
+    margin-bottom: 20px;
+}
+
+.game-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.game-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Promotions */
+.promotions {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.promo-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.promo-icon {
+    font-size: 20px;
+    color: #4CAF50;
+}
+
+.promo-text {
+    font-size: 14px;
+}
+
+.promo-button {
+    margin-left: auto;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Betting Table */
+.bet-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bet-table th {
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    font-size: 12px;
+    font-weight: normal;
+    color: #666;
+}
+
+.bet-table td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.team-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+}
+
+.team-logo {
+    width: 24px;
+    height: 24px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+.odds {
+    background-color: #f9f9f9;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.odds-positive {
+    color: #4CAF50;
+}
+
+.odds-negative {
+    color: #f44336;
+}
+
+/* Bet Slip */
+.bet-slip {
+    width: 350px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.bet-slip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.bet-count {
+    width: 30px;
+    height: 30px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.bet-slip-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.bet-slip-info {
+    color: #4267B2;
+}
+
+.empty-slip {
+    text-align: center;
+    padding: 50px 0;
+    color: #666;
+}
+
+.empty-slip h3 {
+    margin-bottom: 10px;
+}
+
+.empty-slip p {
+    font-size: 14px;
+}
+
+/* Social Section */
+.social-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.social-text {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Footer */
+.footer {
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 12px;
+    color: #666;
+}

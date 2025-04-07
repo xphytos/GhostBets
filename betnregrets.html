@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Sportsbook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo">YOUR LOGO HERE</div>
+        </div>
+        <div class="top-nav">
+            <a href="#">DAILY FANTASY</a>
+            <a href="#">SPORTSBOOK</a>
+            <a href="#">CASINO</a>
+            <a href="#">PICK6</a>
+            <a href="#">HORSE</a>
+            <a href="#">SHOP</a>
+        </div>
+        <div class="user-tools">
+            <div class="responsible-gaming">Responsible Gaming</div>
+            <div class="notifications">🔔</div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#">My Bets</a>
+        <a href="#" class="active">Live In-Game</a>
+        <a href="#">Promos</a>
+        <a href="#">How To Bet</a>
+        <a href="#">VIP</a>
+        <a href="#">Pools</a>
+        <a href="#">Social</a>
+        <a href="#">Dynasty</a>
+        <div class="login-container">
+            <span class="login-prompt">Want to start placing bets?</span>
+            <a href="#" class="login-button">Log In</a>
+        </div>
+    </nav>
+
+    <div class="betting-options">
+        <aside class="sidebar">
+            <div class="popular-sports">
+                <div class="section-title">POPULAR</div>
+                <div class="sport-list">
+                    <a href="#">MLB</a>
+                    <a href="#">College Basketball (M)</a>
+                    <a href="#">The Masters</a>
+                    <a href="#">NBA</a>
+                    <a href="#">NHL</a>
+                    <a href="#">English Premier League</a>
+                    <a href="#">ATP - Monte Carlo</a>
+                    <a href="#">Spain - La Liga</a>
+                    <a href="#">Challenger Quals. - Mexico City</a>
+                    <a href="#">Italy - Serie A</a>
+                    <a href="#">Champions League</a>
+                    <a href="#">Portugal - Primeira Liga</a>
+                    <a href="#">USA - MLS</a>
+                    <a href="#">Challenger Quals. - Sarasota</a>
+                    <a href="#">College Baseball</a>
+                    <a href="#">France - Ligue 1</a>
+                </div>
+            </div>
+            <div class="sports-teams">
+                <div class="section-title">SPORTS TEAMS</div>
+            </div>
+            <div class="a-z-sports">
+                <div class="section-title">A-Z SPORTS</div>
+                <div class="sport-list">
+                    <a href="#">AUSSIE RULES</a>
+                    <a href="#">BASEBALL</a>
+                    <a href="#">BASKETBALL</a>
+                    <a href="#">BOXING</a>
+                    <a href="#">CRICKET</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="sport-tabs">
+                <div class="sport-tab active">BASEBALL</div>
+                <div class="sport-tab">TENNIS</div>
+                <div class="sport-tab">SOCCER</div>
+            </div>
+
+            <div class="game-section">
+                <div class="game-header">
+                    <div class="game-title">Game</div>
+                    <div class="dropdown-icon">▼</div>
+                </div>
+            </div>
+
+            <div class="promotions">
+                <div class="promo-card">
+                    <div class="promo-icon">🎯</div>
+                    <div class="promo-text">Get a No Sweat token to use on a Home Run bet every day!</div>
+                    <button class="promo-button">Opt In</button>
+                </div>
+                <div class="promo-card">
+                    <div class="promo-icon">🏆</div>
+                    <div class="promo-text">Play FREE for a shot to win a share of $500!</div>
+                    <button class="promo-button">Play Now</button>
+                </div>
+            </div>
+
+            <div class="game-section">
+                <div class="game-header">
+                    <div class="game-title">MLB</div>
+                    <div class="dropdown-icon">▲</div>
+                </div>
+
+                <table class="bet-table">
+                    <thead>
+                        <tr>
+                            <th>TODAY</th>
+                            <th>RUN LINE</th>
+                            <th>TOTAL</th>
+                            <th>MONEYLINE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="team-name">
+                                    <div class="team-logo"></div>
+                                    NY Yankees
+                                </div>
+                            </td>
+                            <td>
+                                <div class="odds">-1.5 <span class="odds-positive">+130</span></div>
+                            </td>
+                            <td>
+                                <div class="odds">O 5.5 <span class="odds-negative">-125</span></div>
+                            </td>
+                            <td>
+                                <div class="odds"><span class="odds-negative">-154</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="team-name">
+                                    <div class="team-logo"></div>
+                                    DET Tigers
+                                </div>
+                            </td>
+                            <td>
+                                <div class="odds">+1.5 <span class="odds-negative">-166</span></div>
+                            </td>
+                            <td>
+                                <div class="odds">U 5.5 <span class="odds-negative">-105</span></div>
+                            </td>
+                            <td>
+                                <div class="odds"><span class="odds-positive">+120</span></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <div class="bet-slip">
+            <div class="bet-slip-header">
+                <div class="bet-count">0</div>
+                <div class="bet-slip-title">BET SLIP</div>
+                <div class="bet-slip-info">ⓘ</div>
+            </div>
+
+            <div class="empty-slip">
+                <h3>YOUR PICKS WILL SHOW UP HERE.</h3>
+                <p>Select picks to then see the different types of bets available, including Singles, Parlays, Teasers, Round Robins and more.</p>
+            </div>
+
+            <div class="social-section">
+                <div class="social-logo">SOCIAL</div>
+                <div class="social-text">Login to see Social activity</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Server Time: 04/07/2025 3:47:45 p.m.
+    </footer>
+</body>
+</html>
