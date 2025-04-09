@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sportsbook - Light Theme</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="Home.css" />
+  <style>
+    .main-nav a.active {
+      color: #fff; /* White text for contrast */
+      background-color: #808080; /* Grey background */
+      border-radius: 5px; /* Rounded corners for active tab */
+      padding: 12px 20px; /* Adjust padding for better alignment */
+    }
+  </style>
 </head>
 <body>
   <div class="top-nav">
@@ -19,17 +28,20 @@
       </div>
   </div>
   
-  <div class="main-nav">
-      <a href="#" class="active">Home</a>
-      <a href="#">My Bets</a>
-      <a href="#">Live In-Game</a>
-      <a href="#">Promos</a>
-      <a href="#">How To Bet</a>
-      <a href="#">VIP</a>
-      <a href="#">Pools</a>
-      <a href="#">Social</a>
-      <a href="#">Dynasty</a>
-  </div>
+  <nav class="main-nav">
+    <a href="#" class="active">Home</a>
+    <a href="#">My Bets</a>
+    <a href="#">Live In-Game</a>
+    <a href="#">Daily Rewards</a>
+    <a href="#">How To Bet</a>
+    <a href="#">VIP</a>
+    <a href="#">Pools</a>
+    <a href="#">Social</a>
+    <div class="nav-indicator"></div>
+    <div style="margin-left: auto; display: flex; align-items: center">
+      <a href="#" class="login-button" style="margin-left: 15px; padding: 8px 15px">Log In</a>
+    </div>
+  </nav>
   
   <div class="main-content">
       <div class="sidebar">
@@ -135,5 +147,42 @@
           </div>
       </div>
   </div>
+
+  <script>
+    const nav = document.querySelector('.main-nav');
+    const indicator = document.querySelector('.nav-indicator');
+    const links = document.querySelectorAll('.main-nav a');
+
+    function updateIndicator(link) {
+      const linkRect = link.getBoundingClientRect();
+      const navRect = nav.getBoundingClientRect();
+
+      // Calculate the position and width of the indicator
+      indicator.style.width = `${linkRect.width}px`;
+      indicator.style.left = `${linkRect.left - navRect.left}px`;
+    }
+
+    // Initialize the indicator on page load
+    const activeLink = document.querySelector('.main-nav a.active');
+    if (activeLink) {
+      updateIndicator(activeLink);
+    }
+
+    // Add click event listeners to update the indicator
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Remove the active class from all links
+        links.forEach(link => link.classList.remove('active'));
+
+        // Add the active class to the clicked link
+        link.classList.add('active');
+
+        // Update the indicator position
+        updateIndicator(link);
+      });
+    });
+  </script>
 </body>
 </html>

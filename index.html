@@ -4,344 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Sportsbook</title>
-    <link rel="stylesheet" href="betnregrets.css?v=1" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-      }
-
-      body {
-        background-color: #ffffff;
-        color: #333333;
-      }
-
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        background-color: #f9f9f9;
-        border-bottom: 1px solid #e0e0e0;
-      }
-
-      .logo-container {
-        display: flex;
-        align-items: center;
-      }
-
-      .logo {
-        width: 150px;
-        height: 40px;
-        background-color: #f0f0f0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #999;
-        font-size: 12px;
-        border: 1px dashed #ccc;
-        margin-right: 10px;
-      }
-
-      .top-nav {
-        display: flex;
-        gap: 20px;
-      }
-
-      .top-nav a {
-        text-decoration: none;
-        color: #333333;
-        font-size: 14px;
-      }
-
-      .user-tools {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-      }
-
-      .responsible-gaming {
-        display: flex;
-        align-items: center;
-        font-size: 14px;
-        color: #666;
-      }
-
-      .notifications {
-        font-size: 18px;
-        color: #666;
-      }
-
-      .main-nav {
-        display: flex;
-        background-color: #ffffff;
-        border-bottom: 1px solid #e0e0e0;
-        padding: 0 20px;
-      }
-
-      .main-nav a {
-        padding: 15px 20px;
-        text-decoration: none;
-        color: #333333;
-        font-weight: bold;
-      }
-
-      .main-nav a.active {
-        color: rgb(31, 29, 29); /* Match button text color */
-        background-color: #d4d4d4; /* Match button background color */
-        border-bottom: 3px solid #d4d4d4; /* Optional: Remove or match button color */
-        border-radius: 5px; /* Optional: Add rounded corners like buttons */
-        padding: 12px 20px; /* Adjust padding for better alignment */
-      }
-
-      .betting-options {
-        display: flex;
-        padding: 15px 20px;
-      }
-
-      .sidebar {
-        width: 200px;
-        background-color: #f9f9f9;
-        padding: 15px;
-        height: calc(100vh - 110px);
-      }
-
-      .popular-sports {
-        margin-bottom: 20px;
-      }
-
-      .section-title {
-        font-weight: bold;
-        margin-bottom: 10px;
-        font-size: 14px;
-        color: #666;
-      }
-
-      .sport-list a {
-        display: block;
-        text-decoration: none;
-        color: #333;
-        padding: 8px 0;
-        font-size: 14px;
-      }
-
-      .sport-list a:hover {
-        color: #4caf50;
-      }
-
-      .main-content {
-        flex: 1;
-        padding: 20px;
-      }
-
-      .sport-tabs {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 20px;
-      }
-
-      .sport-tab {
-        padding: 8px 20px;
-        border: 1px solid #e0e0e0;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 14px;
-        background-color: #fff;
-      }
-
-      .sport-tab.active {
-        background-color: #333;
-        color: #fff;
-      }
-
-      .game-section {
-        margin-bottom: 20px;
-      }
-
-      .game-header {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 0;
-        border-bottom: 1px solid #e0e0e0;
-      }
-
-      .game-title {
-        font-weight: bold;
-        font-size: 16px;
-      }
-
-      .promotions {
-        display: flex;
-        gap: 10px;
-        margin: 20px 0;
-        overflow-x: auto;
-      }
-
-      .promo-card {
-        background-color: #f9f9f9;
-        padding: 15px;
-        border-radius: 5px;
-        min-width: 300px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .promo-icon {
-        font-size: 20px;
-        color: #82c6e0;
-      }
-
-      .promo-text {
-        font-size: 14px;
-      }
-
-      .promo-button {
-        margin-left: auto;
-        padding: 8px 15px;
-        background-color: #82c6e0;
-        color: rgb(0, 0, 0);
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      .bet-table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-
-      .bet-table th {
-        text-align: center;
-        padding: 10px;
-        background-color: #f9f9f9;
-        font-size: 12px;
-        font-weight: normal;
-        color: #666;
-      }
-
-      .bet-table td {
-        padding: 15px 10px;
-        border-bottom: 1px solid #f0f0f0;
-        text-align: center;
-      }
-
-      .team-name {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        text-align: left;
-      }
-
-      .team-logo {
-        width: 24px;
-        height: 24px;
-        background-color: #f0f0f0;
-        border-radius: 50%;
-      }
-
-      .odds {
-        background-color: #f9f9f9;
-        padding: 8px;
-        border-radius: 5px;
-        font-weight: bold;
-      }
-
-      .odds-positive {
-        color: #4caf50;
-      }
-
-      .odds-negative {
-        color: #f44336;
-      }
-
-      .bet-slip {
-        width: 350px;
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 5px;
-      }
-
-      .bet-slip-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-
-      .bet-count {
-        width: 30px;
-        height: 30px;
-        background-color: #4caf50;
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-      }
-
-      .bet-slip-title {
-        font-weight: bold;
-        font-size: 16px;
-      }
-
-      .bet-slip-info {
-        color: #4267b2;
-      }
-
-      .empty-slip {
-        text-align: center;
-        padding: 50px 0;
-        color: #666;
-      }
-
-      .login-button {
-        display: block;
-        width: 100%;
-        padding: 12px;
-        background-color: #82c6e0;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-weight: bold;
-        font-size: 16px;
-        cursor: pointer;
-        text-align: center;
-        margin-top: 20px;
-      }
-
-      .login-prompt {
-        font-size: 14px;
-        color: #666;
-        text-align: right;
-      }
-
-      .social-section {
-        text-align: center;
-        margin-top: 20px;
-      }
-
-      .social-logo {
-        width: 100px;
-        height: 100px;
-        margin: 0 auto;
-        background-color: #f0f0f0;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 15px;
-      }
-
-      .social-text {
-        font-size: 14px;
-        color: #666;
-      }
-    </style>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <header class="header">
@@ -362,28 +25,22 @@
     </header>
 
     <nav class="main-nav">
-      <a href="#">Home</a>
+      <a href="#" class="active">Home</a>
       <a href="#">My Bets</a>
-      <a href="#" class="active">Live In-Game</a>
+      <a href="#">Live In-Game</a>
       <a href="#">Daily Rewards</a>
       <a href="#">How To Bet</a>
       <a href="#">VIP</a>
       <a href="#">Pools</a>
       <a href="#">Social</a>
+      <div class="nav-indicator"></div>
       <div style="margin-left: auto; display: flex; align-items: center">
-        <span class="login-prompt">Want to start placing bets?</span>
-        <a
-          href="#"
-          class="login-button"
-          style="margin-left: 15px; padding: 8px 15px"
-          >Log In</a
-        >
+        <a href="#" class="login-button" style="margin-left: 15px; padding: 8px 15px">Log In</a>
       </div>
     </nav>
 
     <div class="betting-options">
       <aside class="sidebar">
-        <!-- Inline styles override CSS -->
         <div class="popular-sports">
           <div class="section-title">POPULAR</div>
           <div class="sport-list">
@@ -550,13 +207,47 @@
       </div>
     </div>
 
-    <footer
-      style="
-        text-align: right;
-        padding: 10px 20px;
-        font-size: 12px;
-        color: #666;
-      "
-    ></footer>
+    <footer>
+      <p style="text-align: right; padding: 10px 20px; font-size: 12px; color: #666;">
+        © 2025 Custom Sportsbook
+      </p>
+    </footer>
+
+    <script>
+      const nav = document.querySelector('.main-nav');
+      const indicator = document.querySelector('.nav-indicator');
+      const links = document.querySelectorAll('.main-nav a');
+
+      function updateIndicator(link) {
+        const linkRect = link.getBoundingClientRect();
+        const navRect = nav.getBoundingClientRect();
+
+        // Calculate the position and width of the indicator
+        indicator.style.width = `${linkRect.width}px`;
+        indicator.style.left = `${linkRect.left - navRect.left}px`;
+      }
+
+      // Initialize the indicator on page load
+      const activeLink = document.querySelector('.main-nav a.active');
+      if (activeLink) {
+        updateIndicator(activeLink);
+      }
+
+      // Add click event listeners to update the indicator
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          // Remove the active class from all links
+          links.forEach(link => link.classList.remove('active'));
+
+          // Add the active class to the clicked link
+          link.classList.add('active');
+
+          // Update the indicator position
+          updateIndicator(link);
+        });
+      });
+    </script>
   </body>
 </html>
