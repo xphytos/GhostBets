@@ -1,113 +1,170 @@
-<link rel="stylesheet" href="mybets.css?v=1">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Bets</title>
+    <!-- Include shared header -->
+    <?php include 'shared-header.html'; ?>
+    <link rel="stylesheet" href="bars.css" />
+    <link rel="stylesheet" href="mybets.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo">YOUR LOGO HERE</div>
+      </div>
+      <div class="top-nav">
+        <a href="sportsbook.html">SPORTSBOOK</a>
+        <a href="league.html">LEAGUE</a>
+        <a href="pick6.html">PICK6</a>
+        <a href="events.html">EVENTS</a>
+        <a href="shop.html">SHOP</a>
+      </div>
+      <div class="user-tools">
+        <div class="notifications">⚙️</div>
+      </div>
+    </header>
 
-<div class="my-bets-container">
-    <div class="my-bets-header">
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <a href="mybets.html" class="active">My Bets</a>
+      <a href="live-in-game.html">Live In Bets</a>
+      <a href="daily-rewards.html">Daily Rewards</a>
+      <a href="how-to-bet.html">How To Bet</a>
+      <a href="vip.html">VIP</a>
+      <a href="pools.html">Pools</a>
+      <a href="social.html">Social</a>
+      <div class="nav-indicator"></div>
+      <div style="margin-left: auto; display: flex; align-items: center">
+        <a href="index.html" class="login-button">Log In</a>
+      </div>
+    </nav>
+
+    <div class="my-bets-container">
+      <div class="my-bets-header">
         <h1>MY BETS</h1>
         <div class="balance-container">
-            <span class="balance">$6.61</span>
-            <div class="coin-badge">1K</div>
-            <button class="add-funds-button">+</button>
+          <span class="balance">$6.61</span>
+          <div class="coin-badge">1K</div>
+          <button class="add-funds-button">+</button>
         </div>
-    </div>
+      </div>
 
-    <div class="bet-tabs">
+      <div class="bet-tabs">
         <div class="main-tabs">
-            <div class="tab active">MY BETS</div>
-            <div class="tab">BETTING GROUPS <span class="new-badge">NEW</span></div>
+          <div class="tab active">MY BETS</div>
+          <div class="tab">
+            BETTING GROUPS <span class="new-badge">NEW</span>
+          </div>
         </div>
         <div class="filter-tabs">
-            <div class="filter-tab">ALL</div>
-            <div class="filter-tab active">OPEN</div>
-            <div class="filter-tab">SETTLED</div>
-            <div class="filter-tab">WON</div>
-            <div class="filter-tab">LOST</div>
+          <div class="filter-tab">ALL</div>
+          <div class="filter-tab active">OPEN</div>
+          <div class="filter-tab">SETTLED</div>
+          <div class="filter-tab">WON</div>
+          <div class="filter-tab">LOST</div>
         </div>
+      </div>
+
+      <div class="bet-card">
+        <div class="bet-header">
+          <div class="bet-type">
+            <span class="bet-description">OVER 4.5</span>
+            <span class="bet-odds">-170</span>
+          </div>
+          <div class="bet-status">OPEN</div>
+        </div>
+
+        <div class="player-name">Aaron Civale Strikeouts Thrown</div>
+
+        <div class="bet-condition">
+          Player must start and throw at least one pitch
+        </div>
+
+        <div class="bet-details">
+          <span class="wager">Wager: $20.00</span>
+          <span class="payout">To Pay: $31.76</span>
+        </div>
+
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress" style="width: 40%"></div>
+          </div>
+          <div class="progress-labels">
+            <span class="current-value">2</span>
+            <span class="target-value">4.5</span>
+          </div>
+        </div>
+
+        <div class="game-status">
+          <div class="teams">
+            <div class="team">
+              <div class="team-logo team-logo-cle"></div>
+              <div class="team-name">CLE GUARDIANS</div>
+            </div>
+            <div class="team">
+              <div class="team-logo team-logo-pit"></div>
+              <div class="team-name">PIT PIRATES</div>
+            </div>
+          </div>
+
+          <div class="scoreboard">
+            <div class="innings">
+              <div class="inning">1</div>
+              <div class="inning">2</div>
+              <div class="inning">R</div>
+              <div class="inning">H</div>
+            </div>
+            <div class="scores">
+              <div class="team-scores">
+                <div class="score">0</div>
+                <div class="score">0</div>
+                <div class="score highlight">0</div>
+                <div class="score">0</div>
+              </div>
+              <div class="team-scores">
+                <div class="score">0</div>
+                <div class="score">0</div>
+                <div class="score highlight">0</div>
+                <div class="score">0</div>
+              </div>
+            </div>
+            <div class="game-info">
+              <div class="inning-status"><span class="arrow">▲</span> 2ND</div>
+              <div class="outs">2 OUT</div>
+            </div>
+          </div>
+        </div>
+
+        <button class="cashout-button">
+          <span class="cashout-amount">CASH OUT $22.50</span>
+        </button>
+
+        <div class="bet-footer">
+          <button class="share-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+              <polyline points="16 6 12 2 8 6"></polyline>
+              <line x1="12" y1="2" x2="12" y2="15"></line>
+            </svg>
+          </button>
+          <div class="bet-id">DK63825374903796086</div>
+          <div class="bet-time">Placed: Jul 19, 2023, 10:48:23AM</div>
+        </div>
+      </div>
     </div>
 
-    <div class="bet-card">
-        <div class="bet-header">
-            <div class="bet-type">
-                <span class="bet-description">OVER 4.5</span>
-                <span class="bet-odds">-170</span>
-            </div>
-            <div class="bet-status">OPEN</div>
-        </div>
-        
-        <div class="player-name">Aaron Civale Strikeouts Thrown</div>
-        
-        <div class="bet-condition">Player must start and throw at least one pitch</div>
-        
-        <div class="bet-details">
-            <span class="wager">Wager: $20.00</span>
-            <span class="payout">To Pay: $31.76</span>
-        </div>
-        
-        <div class="progress-container">
-            <div class="progress-bar">
-                <div class="progress" style="width: 40%;"></div>
-            </div>
-            <div class="progress-labels">
-                <span class="current-value">2</span>
-                <span class="target-value">4.5</span>
-            </div>
-        </div>
-        
-        <div class="game-status">
-            <div class="teams">
-                <div class="team">
-                    <div class="team-logo team-logo-cle"></div>
-                    <div class="team-name">CLE GUARDIANS</div>
-                </div>
-                <div class="team">
-                    <div class="team-logo team-logo-pit"></div>
-                    <div class="team-name">PIT PIRATES</div>
-                </div>
-            </div>
-            
-            <div class="scoreboard">
-                <div class="innings">
-                    <div class="inning">1</div>
-                    <div class="inning">2</div>
-                    <div class="inning">R</div>
-                    <div class="inning">H</div>
-                </div>
-                <div class="scores">
-                    <div class="team-scores">
-                        <div class="score">0</div>
-                        <div class="score">0</div>
-                        <div class="score highlight">0</div>
-                        <div class="score">0</div>
-                    </div>
-                    <div class="team-scores">
-                        <div class="score">0</div>
-                        <div class="score">0</div>
-                        <div class="score highlight">0</div>
-                        <div class="score">0</div>
-                    </div>
-                </div>
-                <div class="game-info">
-                    <div class="inning-status">
-                        <span class="arrow">▲</span> 2ND
-                    </div>
-                    <div class="outs">2 OUT</div>
-                </div>
-            </div>
-        </div>
-        
-        <button class="cashout-button">
-            <span class="cashout-amount">CASH OUT $22.50</span>
-        </button>
-        
-        <div class="bet-footer">
-            <button class="share-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
-                    <polyline points="16 6 12 2 8 6"></polyline>
-                    <line x1="12" y1="2" x2="12" y2="15"></line>
-                </svg>
-            </button>
-            <div class="bet-id">DK63825374903796086</div>
-            <div class="bet-time">Placed: Jul 19, 2023, 10:48:23AM</div>
-        </div>
-    </div>
-</div>
+    <script src="nav-bar-animation.js"></script>
+  </body>
+</html>

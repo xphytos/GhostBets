@@ -3,251 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Custom Sportsbook</title>
+    <title>Login or Sign Up</title>
     <link rel="stylesheet" href="index.css" />
+    <!-- Updated to link index.css -->
   </head>
   <body>
-    <header class="header">
-      <div class="logo-container">
-        <div class="logo">YOUR LOGO HERE</div>
-      </div>
-      <div class="top-nav">
-        <a href="#">SPORTSBOOK</a>
-        <a href="#">LEAGUE</a>
-        <a href="#">PICK6</a>
-        <a href="#">EVENTS</a>
-        <a href="#">SHOP</a>
-      </div>
-      <div class="user-tools">
-        <div class="responsible-gaming">Responsible Gaming</div>
-        <div class="notifications">🔔</div>
-      </div>
-    </header>
+    <div class="login-container">
+      <div class="logo">YOUR LOGO HERE</div>
+      <h1>Welcome Back</h1>
+      <p class="subtitle">Log in to your account or create a new one.</p>
 
-    <nav class="main-nav">
-      <a href="#" class="active">Home</a>
-      <a href="#">My Bets</a>
-      <a href="#">Live In-Game</a>
-      <a href="#">Daily Rewards</a>
-      <a href="#">How To Bet</a>
-      <a href="#">VIP</a>
-      <a href="#">Pools</a>
-      <a href="#">Social</a>
-      <div class="nav-indicator"></div>
-      <div style="margin-left: auto; display: flex; align-items: center">
-        <a href="#" class="login-button" style="margin-left: 15px; padding: 8px 15px">Log In</a>
-      </div>
-    </nav>
+      <div class="form-container">
+        <!-- Log In Form -->
+        <form class="login-form" onsubmit="return handleLogin(event)">
+          <h2>Log In</h2>
+          <input id="username" type="email" placeholder="Email" required />
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit" class="btn">Log In</button>
+        </form>
 
-    <div class="betting-options">
-      <aside class="sidebar">
-        <div class="popular-sports">
-          <div class="section-title">POPULAR</div>
-          <div class="sport-list">
-            <a href="#">NBA</a>
-            <a href="#">College Basketball (M)</a>
-            <a href="#">College Baseball</a>
-            <a href="#">MLB</a>
-            <a href="#">NHL</a>
-            <a href="#">USA - MLS</a>
-            <a href="#">English Premier League</a>
-            <a href="#">Spain - La Liga</a>
-            <a href="#">Italy - Serie A</a>
-            <a href="#">France - Ligue 1</a>
-            <a href="#">Portugal - Primeira Liga</a>
-            <a href="#">Champions League</a>
-            <a href="#">The Masters</a>
-            <a href="#">ATP - Monte Carlo</a>
-            <a href="#">Challenger Quals. - Mexico City</a>
-            <a href="#">Challenger Quals. - Sarasota</a>
-          </div>
-        </div>
-        <div class="sports-teams">
-          <div class="section-title">SPORTS TEAMS</div>
-        </div>
-        <div class="a-z-sports">
-          <div class="section-title">A-Z SPORTS</div>
-          <div class="sport-list">
-            <a href="#">AUSSIE RULES</a>
-            <a href="#">BASEBALL</a>
-            <a href="#">BASKETBALL</a>
-            <a href="#">BOXING</a>
-            <a href="#">CRICKET</a>
-            <a href="#">CYCLING</a>
-            <a href="#">DARTS</a>
-            <a href="#">ESPORTS</a>
-            <a href="#">FOOTBALL</a>
-            <a href="#">GOLF</a>
-            <a href="#">SOCCER</a>
-            <a href="#">TENNIS</a>
-            <a href="#">VOLLEYBALL</a>
-            <a href="#">WRESTLING</a>
-            <a href="#">OTHER</a>
-          </div>
-        </div>
-      </aside>
+        <div class="divider">OR</div>
 
-      <main class="main-content">
-        <div class="sport-tabs">
-          <div class="sport-tab active">BASEBALL</div>
-          <div class="sport-tab">TENNIS</div>
-          <div class="sport-tab">SOCCER</div>
-        </div>
-
-        <div class="game-section">
-          <div class="game-header">
-            <div class="game-title">Game</div>
-            <div class="dropdown-icon">▼</div>
-          </div>
-        </div>
-
-        <div class="promotions">
-          <div class="promo-card">
-            <div class="promo-icon">🎯</div>
-            <div class="promo-text">
-              Get a No Sweat token to use on a Home Run bet every day!
-            </div>
-            <button class="promo-button">Opt In</button>
-          </div>
-          <div class="promo-card">
-            <div class="promo-icon">🏆</div>
-            <div class="promo-text">
-              Play FREE for a shot to win a share of $500!
-            </div>
-            <button class="promo-button">Play Now</button>
-          </div>
-        </div>
-
-        <div class="game-section">
-          <div class="game-header">
-            <div class="game-title">MLB</div>
-            <div class="dropdown-icon">▲</div>
-          </div>
-
-          <table class="bet-table">
-            <thead>
-              <tr>
-                <th>TODAY</th>
-                <th>RUN LINE</th>
-                <th>TOTAL</th>
-                <th>MONEYLINE</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="team-name">
-                    <div class="team-logo"></div>
-                    NY Yankees
-                  </div>
-                </td>
-                <td>
-                  <div class="odds">
-                    -1.5 <span class="odds-positive">+130</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="odds">
-                    O 5.5 <span class="odds-negative">-125</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="odds">
-                    <span class="odds-negative">-154</span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="team-name">
-                    <div class="team-logo"></div>
-                    DET Tigers
-                  </div>
-                </td>
-                <td>
-                  <div class="odds">
-                    +1.5 <span class="odds-negative">-166</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="odds">
-                    U 5.5 <span class="odds-negative">-105</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="odds">
-                    <span class="odds-positive">+120</span>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </main>
-
-      <div class="bet-slip">
-        <div class="bet-slip-header">
-          <div class="bet-count">0</div>
-          <div class="bet-slip-title">BET SLIP</div>
-          <div class="bet-slip-info">ⓘ</div>
-        </div>
-
-        <div class="empty-slip">
-          <h3>YOUR PICKS WILL SHOW UP HERE.</h3>
-          <p>
-            Select picks to then see the different types of bets available,
-            including Singles, Parlays, Teasers, Round Robins and more.
-          </p>
-        </div>
-
-        <div class="social-section">
-          <div class="social-logo">SOCIAL</div>
-          <div class="social-text">Login to see Social activity</div>
-        </div>
+        <!-- Sign Up Form -->
+        <form class="signup-form">
+          <h2>Create Account</h2>
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <input type="password" placeholder="Confirm Password" required />
+          <button type="submit" class="btn">Sign Up</button>
+        </form>
       </div>
     </div>
 
-    <footer>
-      <p style="text-align: right; padding: 10px 20px; font-size: 12px; color: #666;">
-        © 2025 Custom Sportsbook
-      </p>
-    </footer>
-
     <script>
-      const nav = document.querySelector('.main-nav');
-      const indicator = document.querySelector('.nav-indicator');
-      const links = document.querySelectorAll('.main-nav a');
+      // Temporary login logic for testing
+      function handleLogin(event) {
+        event.preventDefault(); // Prevent form submission
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
 
-      function updateIndicator(link) {
-        const linkRect = link.getBoundingClientRect();
-        const navRect = nav.getBoundingClientRect();
-
-        // Calculate the position and width of the indicator
-        indicator.style.width = `${linkRect.width}px`;
-        indicator.style.left = `${linkRect.left - navRect.left}px`;
+        // Temporary test credentials
+        if (username === "testuser@gmail.com" && password === "testpass") {
+          window.location.href = "home.html"; // Redirect to the home page
+        } else {
+          alert(
+            "Invalid credentials. Use 'testuser' and 'testpass' for testing."
+          );
+        }
       }
-
-      // Initialize the indicator on page load
-      const activeLink = document.querySelector('.main-nav a.active');
-      if (activeLink) {
-        updateIndicator(activeLink);
-      }
-
-      // Add click event listeners to update the indicator
-      links.forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-
-          // Remove the active class from all links
-          links.forEach(link => link.classList.remove('active'));
-
-          // Add the active class to the clicked link
-          link.classList.add('active');
-
-          // Update the indicator position
-          updateIndicator(link);
-        });
-      });
     </script>
   </body>
 </html>

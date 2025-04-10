@@ -1,188 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sportsbook - Light Theme</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="Home.css" />
-  <style>
-    .main-nav a.active {
-      color: #fff; /* White text for contrast */
-      background-color: #808080; /* Grey background */
-      border-radius: 5px; /* Rounded corners for active tab */
-      padding: 12px 20px; /* Adjust padding for better alignment */
-    }
-  </style>
-</head>
-<body>
-  <div class="top-nav">
-      <div style="flex: 1;"></div>
-      <div class="top-menu">
-          <a href="#" class="top-menu-item">DAILY FANTASY</a>
-          <a href="#" class="top-menu-item active">SPORTSBOOK</a>
-          <a href="#" class="top-menu-item">CASINO</a>
-          <a href="#" class="top-menu-item">PICK6</a>
-          <a href="#" class="top-menu-item">DK HORSE</a>
-          <a href="#" class="top-menu-item">DK SHOP</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- Include shared header -->
+    <?php include 'shared-header.html'; ?>
+    <link rel="stylesheet" href="bars.css" />
+    <link rel="stylesheet" href="home.css" />
+    <style>
+      /* Top bar styles from index.html */
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #333; /* Dark background */
+        padding: 10px 20px;
+        color: #fff;
+      }
+
+      .logo-container {
+        flex: 1;
+      }
+
+      .logo {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .top-nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      .top-nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      .top-nav a:hover {
+        background-color: #555;
+      }
+
+      .user-tools {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: none; /* Ensure no background color */
+        padding: 0; /* Remove any padding */
+        margin: 0; /* Remove any margin */
+      }
+
+      .notifications {
+        font-size: 18px;
+        cursor: pointer;
+        background: none; /* Ensure no background color */
+        padding: 0; /* Remove any padding */
+        margin: 0; /* Remove any margin */
+        color: #fff; /* Ensure the icon is visible */
+      }
+
+      .main-nav a.active {
+        color: #fff; /* White text for contrast */
+        background-color: transparent; /* Grey background */
+        border-radius: 5px; /* Rounded corners for active tab */
+        padding: 12px 20px; /* Adjust padding for better alignment */
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo">YOUR LOGO HERE</div>
       </div>
-  </div>
-  
-  <nav class="main-nav">
-    <a href="#" class="active">Home</a>
-    <a href="#">My Bets</a>
-    <a href="#">Live In-Game</a>
-    <a href="#">Daily Rewards</a>
-    <a href="#">How To Bet</a>
-    <a href="#">VIP</a>
-    <a href="#">Pools</a>
-    <a href="#">Social</a>
-    <div class="nav-indicator"></div>
-    <div style="margin-left: auto; display: flex; align-items: center">
-      <a href="#" class="login-button" style="margin-left: 15px; padding: 8px 15px">Log In</a>
-    </div>
-  </nav>
-  
-  <div class="main-content">
+      <div class="top-nav">
+        <a href="sportsbook.html">SPORTSBOOK</a>
+        <a href="league.html">LEAGUE</a>
+        <a href="pick6.html">PICK6</a>
+        <a href="events.html">EVENTS</a>
+        <a href="shop.html">SHOP</a>
+      </div>
+      <div class="user-tools">
+        <div class="notifications">⚙️</div>
+        <!-- Gear icon for settings -->
+      </div>
+    </header>
+
+    <nav class="main-nav">
+      <a href="home.html" class="active">Home</a>
+      <a href="mybets.html">My Bets</a>
+      <a href="live-in-game.html">Live In Bets</a>
+      <a href="daily-rewards.html">Daily Rewards</a>
+      <a href="how-to-bet.html">How To Bet</a>
+      <a href="vip.html">VIP</a>
+      <a href="pools.html">Pools</a>
+      <a href="social.html">Social</a>
+      <div class="nav-indicator"></div>
+      <!-- Sliding grey background -->
+      <div style="margin-left: auto; display: flex; align-items: center">
+        <a href="index.html" class="login-button">Log In</a>
+      </div>
+    </nav>
+
+    <div class="main-content">
       <div class="sidebar">
-          <div class="sidebar-section">
-              <div class="sidebar-title">POPULAR</div>
-              <div class="sidebar-menu">
-                  <a href="#">MLB</a>
-                  <a href="#">NBA</a>
-                  <a href="#">The Masters</a>
-                  <a href="#">NHL</a>
-                  <a href="#">Champions League</a>
-                  <a href="#">ATP - Monte Carlo</a>
-                  <a href="#">College Baseball</a>
-                  <a href="#">English Premier League</a>
-                  <a href="#">Spain - La Liga</a>
-                  <a href="#">Boxing</a>
-                  <a href="#">Challenger - Mexico City</a>
-                  <a href="#">Italy - Serie A</a>
-                  <a href="#">CONCACAF Champions Cup</a>
-                  <a href="#">South Korean KBO</a>
-                  <a href="#">Germany - Bundesliga</a>
-                  <a href="#">France - Ligue 1</a>
-              </div>
-          </div>
-
-          <div class="sidebar-section">
-              <div class="sidebar-title">SPORTS TEAMS</div>
-          </div>
-
-          <div class="sidebar-section">
-              <div class="sidebar-title">A-Z SPORTS</div>
-          </div>
-
+        <div class="sidebar-section">
+          <div class="sidebar-title">POPULAR</div>
           <div class="sidebar-menu">
-              <a href="#">AUSSIE RULES</a>
+            <a href="#">MLB</a>
+            <a href="#">NBA</a>
+            <a href="#">The Masters</a>
+            <a href="#">NHL</a>
+            <a href="#">Champions League</a>
+            <a href="#">ATP - Monte Carlo</a>
+            <a href="#">College Baseball</a>
+            <a href="#">English Premier League</a>
+            <a href="#">Spain - La Liga</a>
+            <a href="#">Boxing</a>
+            <a href="#">Challenger - Mexico City</a>
+            <a href="#">Italy - Serie A</a>
+            <a href="#">CONCACAF Champions Cup</a>
+            <a href="#">South Korean KBO</a>
+            <a href="#">Germany - Bundesliga</a>
+            <a href="#">France - Ligue 1</a>
           </div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">SPORTS TEAMS</div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">A-Z SPORTS</div>
+        </div>
+
+        <div class="sidebar-menu">
+          <a href="#">AUSSIE RULES</a>
+        </div>
       </div>
-      
+
       <div class="content">
-          <div class="promo-slider">
-              <div class="promo-card golf">
-                  <div class="promo-text">
-                      <div class="promo-badge">NEW CUSTOMERS</div>
-                      <div class="promo-title">BET $5 GET $150</div>
-                      <div class="promo-subtitle">INSTANTLY</div>
-                      <div style="font-size: 14px; color: #666;">in Bonus Bets <strong>win or lose!</strong></div>
-                      <div class="promo-actions">
-                          <a href="#" class="promo-link">Details</a>
-                          <button class="btn">Sign Up</button>
-                      </div>
-                  </div>
+        <div class="promo-slider">
+          <div class="promo-card golf">
+            <div class="promo-text">
+              <div class="promo-badge">NEW CUSTOMERS</div>
+              <div class="promo-title">BET $5 GET $150</div>
+              <div class="promo-subtitle">INSTANTLY</div>
+              <div style="font-size: 14px; color: #666">
+                in Bonus Bets <strong>win or lose!</strong>
               </div>
-              
-              <div class="promo-card mlb">
-                  <div class="promo-text">
-                      <div style="font-size: 32px; font-weight: bold; color: #333; margin-bottom: 10px;">NO SWEAT<br>HOME RUN</div>
-                      <div style="font-size: 18px; font-weight: bold; color: #82c6e0; margin-bottom: 15px;">EVERY DAY</div>
-                      <div style="font-size: 14px; color: #666;">Get a Bonus Bet back if you lose!</div>
-                      <div class="promo-actions">
-                          <a href="#" class="promo-link">Details</a>
-                          <button class="btn">Opt In</button>
-                      </div>
-                  </div>
+              <div class="promo-actions">
+                <a href="details.html" class="promo-link">Details</a>
+                <button class="btn" onclick="location.href='signup.html'">
+                  Sign Up
+                </button>
               </div>
-
-              <div class="promo-card"></div>
+            </div>
           </div>
 
-          <div class="refer-banner">Refer a Friend to DraftKings Sportsbook!</div>
-
-          <div class="tab-bar">
-              <div class="tab">LIVE IN-GAME <span class="tab-badge">21</span></div>
-              <div class="tab">STATS HUB</div>
-              <div class="tab active">MLB</div>
-              <div class="tab">NBA</div>
-              <div class="tab">LAKERS @ THUNDER</div>
-              <div class="tab">NHL</div>
-              <div class="tab">GUARDIANS</div>
-              <div class="tab">CELTICS @ KNICKS</div>
-              <div class="tab">CHAMPIONS LEAGUE</div>
-          </div>
-
-          <div class="game-cards">
-              <!-- Game cards here... (you already have that part done) -->
-          </div>
-
-          <div class="boost-banner">
-              <div class="boost-text">
-                  <div class="boost-icon"></div>
-                  <div>Get a Profit Boost to use on a 4+ leg MLB Parlay, SGP or SGPx bet today</div>
+          <div class="promo-card mlb">
+            <div class="promo-text">
+              <div
+                style="
+                  font-size: 32px;
+                  font-weight: bold;
+                  color: #333;
+                  margin-bottom: 10px;
+                "
+              >
+                NO SWEAT<br />HOME RUN
               </div>
-              <button class="btn">Opt In</button>
+              <div
+                style="
+                  font-size: 18px;
+                  font-weight: bold;
+                  color: #82c6e0;
+                  margin-bottom: 15px;
+                "
+              >
+                EVERY DAY
+              </div>
+              <div style="font-size: 14px; color: #666">
+                Get a Bonus Bet back if you lose!
+              </div>
+              <div class="promo-actions">
+                <a href="details.html" class="promo-link">Details</a>
+                <button class="btn" onclick="location.href='opt-in.html'">
+                  Opt In
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div class="bottom-tabs">
-              <div class="bottom-tab active">GAME LINES</div>
-              <div class="bottom-tab">QUICK SGP</div>
-              <div class="bottom-tab">BATTER PROPS</div>
-              <div class="bottom-tab">PITCHER PROPS</div>
-              <div class="bottom-tab">EITHER PLAYER PROPS</div>
-              <div class="bottom-tab">COMBINED PLAYER PROPS</div>
-              <div class="bottom-tab">PLATE APPEARANCE</div>
+          <div class="promo-card"></div>
+        </div>
+
+        <div class="refer-banner">Refer a Friend to DraftKings Sportsbook!</div>
+
+        <div class="tab-bar">
+          <div class="tab">LIVE IN-GAME <span class="tab-badge">21</span></div>
+          <div class="tab">STATS HUB</div>
+          <div class="tab active">MLB</div>
+          <div class="tab">NBA</div>
+          <div class="tab">LAKERS @ THUNDER</div>
+          <div class="tab">NHL</div>
+          <div class="tab">GUARDIANS</div>
+          <div class="tab">CELTICS @ KNICKS</div>
+          <div class="tab">CHAMPIONS LEAGUE</div>
+        </div>
+
+        <div class="game-cards">
+          <!-- Game cards here... (you already have that part done) -->
+        </div>
+
+        <div class="boost-banner">
+          <div class="boost-text">
+            <div class="boost-icon"></div>
+            <div>
+              Get a Profit Boost to use on a 4+ leg MLB Parlay, SGP or SGPx bet
+              today
+            </div>
           </div>
+          <button class="btn" onclick="location.href='opt-in.html'">
+            Opt In
+          </button>
+        </div>
+
+        <div class="bottom-tabs">
+          <div class="bottom-tab active">GAME LINES</div>
+          <div class="bottom-tab">QUICK SGP</div>
+          <div class="bottom-tab">BATTER PROPS</div>
+          <div class="bottom-tab">PITCHER PROPS</div>
+          <div class="bottom-tab">EITHER PLAYER PROPS</div>
+          <div class="bottom-tab">COMBINED PLAYER PROPS</div>
+          <div class="bottom-tab">PLATE APPEARANCE</div>
+        </div>
       </div>
-  </div>
+    </div>
 
-  <script>
-    const nav = document.querySelector('.main-nav');
-    const indicator = document.querySelector('.nav-indicator');
-    const links = document.querySelectorAll('.main-nav a');
-
-    function updateIndicator(link) {
-      const linkRect = link.getBoundingClientRect();
-      const navRect = nav.getBoundingClientRect();
-
-      // Calculate the position and width of the indicator
-      indicator.style.width = `${linkRect.width}px`;
-      indicator.style.left = `${linkRect.left - navRect.left}px`;
-    }
-
-    // Initialize the indicator on page load
-    const activeLink = document.querySelector('.main-nav a.active');
-    if (activeLink) {
-      updateIndicator(activeLink);
-    }
-
-    // Add click event listeners to update the indicator
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        // Remove the active class from all links
-        links.forEach(link => link.classList.remove('active'));
-
-        // Add the active class to the clicked link
-        link.classList.add('active');
-
-        // Update the indicator position
-        updateIndicator(link);
-      });
-    });
-  </script>
-</body>
+    <script src="nav-bar-animation.js"></script>
+  </body>
 </html>
