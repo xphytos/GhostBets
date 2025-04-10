@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Bets</title>
+    <link rel="stylesheet" href="components/bars.css" />
+    <link rel="stylesheet" href="css/mybets.css" />
+    <link rel="stylesheet" href="components/sidebar.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo">YOUR LOGO HERE</div>
+      </div>
+      <div class="top-nav">
+        <a href="sportsbook.html">SPORTSBOOK</a>
+        <a href="league.html">LEAGUE</a>
+        <a href="pick6.html">PICK6</a>
+        <a href="events.html">EVENTS</a>
+        <a href="shop.html">SHOP</a>
+      </div>
+      <div class="user-tools">
+        <div class="notifications">⚙️</div>
+      </div>
+    </header>
+
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <a href="mybets.html" class="active">My Bets</a>
+      <a href="live-in-game.html">Live In Bets</a>
+      <a href="daily-rewards.html">Daily Rewards</a>
+      <a href="how-to-bet.html">How To Bet</a>
+      <a href="vip.html">VIP</a>
+      <a href="pools.html">Pools</a>
+      <a href="social.html">Social</a>
+      <div class="nav-indicator"></div>
+      <div style="margin-left: auto; display: flex; align-items: center">
+        <a href="index.html" class="login-button">Log In</a>
+      </div>
+    </nav>
+
+    <div class="main-content">
+      <div class="sidebar">
+        <div class="sidebar-title">CATEGORIES</div>
+        <div class="sidebar-scrollable">
+          <a href="#">AUSSIE RULES</a>
+          <a href="#">FOOTBALL</a>
+          <a href="#">BASKETBALL</a>
+          <a href="#">BASEBALL</a>
+          <a href="#">TEAM A</a>
+          <a href="#">TEAM B</a>
+          <a href="#">TEAM C</a>
+          <a href="#">CRICKET</a>
+          <a href="#">GOLF</a>
+          <a href="#">HOCKEY</a>
+          <a href="#">RUGBY</a>
+          <a href="#">TENNIS</a>
+          <a href="#">SOCCER</a>
+          <a href="#">MOTORSPORTS</a>
+          <a href="#">ESPORTS</a>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="my-bets-container">
+          <div class="my-bets-header">
+            <h1>MY BETS</h1>
+            <div class="balance-container">
+              <span class="balance">$6.61</span>
+              <div class="coin-badge">1K</div>
+              <button class="add-funds-button">+</button>
+            </div>
+          </div>
+
+          <div class="bet-tabs">
+            <div class="main-tabs">
+              <div class="tab active">MY BETS</div>
+              <div class="tab">
+                BETTING GROUPS <span class="new-badge">NEW</span>
+              </div>
+            </div>
+            <div class="filter-tabs">
+              <div class="filter-tab">ALL</div>
+              <div class="filter-tab active">OPEN</div>
+              <div class="filter-tab">SETTLED</div>
+              <div class="filter-tab">WON</div>
+              <div class="filter-tab">LOST</div>
+            </div>
+          </div>
+
+          <div class="bet-card">
+            <div class="bet-header">
+              <div class="bet-type">
+                <span class="bet-description">OVER 4.5</span>
+                <span class="bet-odds">-170</span>
+              </div>
+              <div class="bet-status">OPEN</div>
+            </div>
+
+            <div class="player-name">Aaron Civale Strikeouts Thrown</div>
+
+            <div class="bet-condition">
+              Player must start and throw at least one pitch
+            </div>
+
+            <div class="bet-details">
+              <span class="wager">Wager: $20.00</span>
+              <span class="payout">To Pay: $31.76</span>
+            </div>
+
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress" style="width: 40%"></div>
+              </div>
+              <div class="progress-labels">
+                <span class="current-value">2</span>
+                <span class="target-value">4.5</span>
+              </div>
+            </div>
+
+            <div class="game-status">
+              <div class="teams">
+                <div class="team">
+                  <div class="team-logo team-logo-cle"></div>
+                </div>
+                <div class="team"></div>
+              </div>
+
+              <div class="scoreboard">
+                <div class="innings"></div>
+                <div class="scores"></div>
+                <div class="game-info"></div>
+              </div>
+            </div>
+
+            <button class="cashout-button">
+              <span class="cashout-amount">CASH OUT $22.50</span>
+            </button>
+
+            <div class="bet-footer">
+              <button class="share-button">
+                <svg stroke-linejoin="round"></svg>
+              </button>
+              <div class="bet-id">DK63825374903796086</div>
+              <div class="bet-time">Placed: Jul 19, 2023, 10:48:23AM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/nav-bar-animation.js"></script>
+    <script src="js/sidebar-toggle.js" defer></script>
+    <script src="js/load-sidebar.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333; /* Dark background */
+  padding: 10px 20px;
+  color: #fff;
+  height: 75px; /* Set a consistent height */
+  box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.top-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.top-nav a:hover {
+  background-color: #555;
+}
+
+.user-tools {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.notifications {
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Navigation Bar Styles */
+.main-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #000; /* Black background */
+  padding: 0 20px;
+  height: 50px; /* Consistent height for all pages */
+  box-sizing: border-box; /* Include padding and border in height */
+  border-bottom: 3px solid #333; /* Consistent bottom border */
+  overflow: visible; /* Ensure no clipping */
+}
+
+.main-nav a {
+  padding: 10px 15px; /* Consistent padding */
+  text-decoration: none;
+  color: #fff; /* White text */
+  font-size: 14px; /* Consistent font size */
+  font-weight: bold;
+  position: relative;
+  z-index: 1; /* Ensure links are above the indicator */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+.main-nav a.active {
+  color: #fff;
+}
+
+.nav-indicator {
+  position: absolute;
+  bottom: 0; /* Position it at the bottom of the navigation bar */
+  height: 3px; /* Small line height */
+  background-color: lightgrey; /* Light grey color */
+  transition: all 0.3s ease; /* Smooth sliding animation */
+  z-index: 1; /* Ensure it appears above the background */
+  width: 0; /* Initial width */
+  left: 0; /* Initial position */
+}
+
+/* Log In Button Styles */
+.login-button {
+  margin-left: auto; /* Push the button to the right */
+  padding: 8px 15px;
+  background-color: #82c6e0; /* Match button color */
+  color: #000; /* Black text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-button:hover {
+  background-color: #6bb3d1; /* Slightly darker shade for hover effect */
+}
