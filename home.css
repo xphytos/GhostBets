@@ -96,31 +96,40 @@ body {
 }
 
 .promo-slider {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between cards */
+  padding: 20px; /* Optional padding around the grid */
 }
 
 .promo-card {
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #f8b9b9, #f5f5f5);
+  border: 1px solid #ddd;
+  border-radius: 8px;
   padding: 20px;
-  border-radius: 12px;
-  flex: 1;
-  min-height: 180px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 225px; /* Set a consistent height */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
-.promo-card.golf {
+.promo-card.new_customers {
   background: linear-gradient(to right, #cde6d0, #f5f5f5);
 }
 
-.promo-card.mlb {
+.promo-card.advertisments {
   background: linear-gradient(to right, #e0f2fa, #f5f5f5);
 }
 
 .promo-text {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Distribute content evenly */
+  align-items: center; /* Center-align content horizontally */
+  height: 100%; /* Ensure it takes up the full height of the card */
+  padding: 10px; /* Add padding for spacing */
 }
 
 .promo-badge {
@@ -133,13 +142,15 @@ body {
 }
 
 .promo-title {
-  font-size: 24px;
-  font-weight: bold;
+  text-align: center; /* Center the text horizontally */
+  margin: 0 auto; /* Ensure proper centering */
+  font-size: 24px; /* Adjust font size if needed */
+  font-weight: bold; /* Ensure bold styling */
 }
 
 .promo-subtitle {
   font-size: 18px;
-  color: #888;
+  color: #000000; /* Change this to your desired color (e.g., red) */
   margin-bottom: 10px;
 }
 
@@ -164,6 +175,8 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
+  max-width: 120px; /* Set a maximum width */
+  text-align: center; /* Center-align the text */
 }
 
 .refer-banner {
@@ -313,4 +326,23 @@ body {
 .bottom-tab.active {
   background-color: #000;
   color: #fff;
+}
+
+.daily-reward-btn {
+  background-color: #ff9800; /* Change the background color */
+  color: #fff; /* Change the text color */
+  font-size: 16px; /* Adjust font size */
+  padding: 10px 20px; /* Adjust padding */
+  border-radius: 8px; /* Add rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+.daily-reward-btn:hover {
+  background-color: #e68900; /* Change hover effect */
+}
+
+@media (max-width: 768px) {
+  .promo-slider {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
 }
