@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.betting-options {
+  display: flex;
+  padding: 15px 20px;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 220px; /* Fixed width for the sidebar */
+  background-color: #fff; /* White background */
+  padding: 15px;
+  border-right: 1px solid #ddd; /* Add a border to separate the sidebar */
+  box-sizing: border-box; /* Include padding in width/height */
+  flex-shrink: 0; /* Prevent the sidebar from shrinking */
+}
+
+.popular-sports {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.sport-list a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.sport-list a:hover {
+  color: #4caf50;
+}
+
+/* Ensure the main-content uses flexbox for proper layout */
+.main-content {
+  display: flex; /* Flexbox layout */
+  align-items: flex-start; /* Align items at the top */
+  padding: 20px;
+  gap: 20px; /* Add spacing between the sidebar and content */
+}
+
+/* Content styles */
+.content {
+  flex: 1; /* Allow the content to take up remaining space */
+  padding: 0 20px;
+}
+
+.promotions {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.promo-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.promo-icon {
+  font-size: 20px;
+  color: #82c6e0;
+}
+
+.promo-text {
+  font-size: 14px;
+}
+
+.promo-button {
+  margin-left: auto;
+  padding: 8px 15px;
+  background-color: #82c6e0;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.live-bets {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bet-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bet-card p {
+  margin: 0 0 15px;
+}
+
+.btn {
+  background-color: #82c6e0;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
