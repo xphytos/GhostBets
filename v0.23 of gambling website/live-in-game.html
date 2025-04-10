@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="css/live-in-game.css" />
     <link rel="stylesheet" href="components/sidebar.css" />
     <script src="js/nav-bar-animation.js" defer></script>
-    <script src="js/sidebar-toggle.js" defer></script>
-    <script src="js/load-sidebar.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -44,6 +42,7 @@
     </nav>
 
     <div class="main-content">
+      <!-- Sidebar -->
       <div class="sidebar">
         <div class="sidebar-title">CATEGORIES</div>
         <div class="sidebar-scrollable">
@@ -65,9 +64,68 @@
         </div>
       </div>
 
+      <!-- Main Section -->
       <div class="content">
-        <div class="betting-options">
-          <!-- Betting options content goes here -->
+        <div class="live-bets">
+          <h2>Live In-Game Bets</h2>
+          <div class="bet-grid">
+            <div class="bet-card">
+              <div class="bet-header">
+                <h3>Lakers vs. Warriors</h3>
+                <p class="status in-progress">In Progress</p>
+              </div>
+              <div class="bet-details">
+                <p><strong>Bet:</strong> Over 220.5 Points</p>
+                <p><strong>Odds:</strong> +110</p>
+                <p><strong>Legs:</strong> Single</p>
+                <p><strong>Parlay:</strong> No</p>
+              </div>
+              <button class="btn">View Details</button>
+            </div>
+
+            <div class="bet-card">
+              <div class="bet-header">
+                <h3>Yankees vs. Red Sox</h3>
+                <p class="status in-progress">In Progress</p>
+              </div>
+              <div class="bet-details">
+                <p><strong>Bet:</strong> Yankees to Win</p>
+                <p><strong>Odds:</strong> -150</p>
+                <p><strong>Legs:</strong> 3 Legs</p>
+                <p><strong>Parlay:</strong> Yes</p>
+              </div>
+              <button class="btn">View Details</button>
+            </div>
+
+            <!-- Add more bet cards as needed -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="bet-summary">
+        <h2>Your Bet Summary</h2>
+        <div class="bet-ticket">
+          <div class="ticket-section prestige">
+            <p><strong>Today's Performance:</strong></p>
+            <p class="up">+$50.00</p>
+          </div>
+          <div class="ticket-section">
+            <p><strong>This Week's Performance:</strong></p>
+            <p class="down">-$20.00</p>
+          </div>
+          <div class="ticket-section">
+            <p><strong>Total Bets Placed:</strong></p>
+            <p>15</p>
+          </div>
+          <div class="ticket-section">
+            <p><strong>Total Bets Won:</strong></p>
+            <p>8</p>
+          </div>
+          <div class="ticket-section">
+            <p><strong>Total Bets Lost:</strong></p>
+            <p>7</p>
+          </div>
         </div>
       </div>
     </div>
