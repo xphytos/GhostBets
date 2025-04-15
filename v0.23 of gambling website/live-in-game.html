@@ -8,6 +8,47 @@
     <link rel="stylesheet" href="css/live-in-game.css" />
     <link rel="stylesheet" href="components/sidebar.css" />
     <script src="js/nav-bar-animation.js" defer></script>
+    <style>
+      #betResult {
+        background: #f4f4f4;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 15px;
+        font-family: monospace;
+      }
+    </style>
+    <script>
+      function calculateBet() {
+        let bet = parseInt(prompt("Enter your bet:"));
+        let betPolarity = parseInt(prompt("Enter your bet polarity (0 for negative odds, 1 for positive odds):"));
+
+        if (isNaN(bet) || isNaN(betPolarity)) {
+          alert("Please enter valid numbers.");
+          return;
+        }
+
+        let Odds = Math.floor(Math.random() * 35 + 1);
+        let Legs = Math.floor(Math.random() * 4 + 1);
+        let Parlay = Math.floor(Math.random() * 4 + 1);
+
+        let profit;
+        if (betPolarity === 0) {
+          profit = (100 / Odds) * (100 - bet);
+        } else {
+          profit = (Odds / 100) * (100 - bet);
+        }
+
+        const totalProfit = profit + (100 - bet);
+
+        document.getElementById("betResult").innerHTML =
+          `<strong>Bet:</strong> $${bet}<br>` +
+          `<strong>Polarity:</strong> ${betPolarity === 0 ? "-" : "+"}<br>` +
+          `<strong>Odds:</strong> ${Odds * 10}<br>` +
+          `<strong>Legs:</strong> ${Legs}<br>` +
+          `<strong>Parlay:</strong> ${Parlay}<br>` +
+          `<strong>Profit:</strong> $${totalProfit.toFixed(2)}`;
+      }
+    </script>
   </head>
   <body>
     <header class="header">
@@ -96,8 +137,6 @@
               </div>
               <button class="btn">View Details</button>
             </div>
-
-            <!-- Add more bet cards as needed -->
           </div>
         </div>
       </div>
@@ -125,6 +164,10 @@
           <div class="ticket-section">
             <p><strong>Total Bets Lost:</strong></p>
             <p>7</p>
+          </div>
+          <div class="ticket-section">
+            <button class="btn" onclick="calculateBet()">Try Custom Bet</button>
+            <div id="betResult"></div>
           </div>
         </div>
       </div>
